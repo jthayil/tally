@@ -127,5 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-src/*/migrations/00**.py
+00**.py
 .vscode/
