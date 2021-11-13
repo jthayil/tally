@@ -16,6 +16,7 @@ Including another URLconf
 from django.urls import path
 from tally import views
 
+
 urlpatterns = [
     path("", views.home, name="home"),
     path("drs_report/list/", views.drsreportlist, name="drsreportlist"),

@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 00**.py
 .vscode/
+.idea/
