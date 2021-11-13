@@ -18,6 +18,6 @@ urlpatterns = [
 	path('drs_report/detail/<int:pk>/', views.drsreportdetail, name="drsreportdetail"),
 	path('drs_report/create/', views.drsreportcreate, name="drsreportcreate"),
 
-	path('drs_report/update/<str:pk>/', views.drsreportupdate, name="drsreportupdate"),
-	path('drs_report/delete/<str:pk>/', views.drsreportselete, name="drsreportselete"),
+	path('drs_report/update/<int:pk>/', views.drsreportupdate, name="drsreportupdate"),
+	path('drs_report/delete/<int:pk>/', views.drsreportselete, name="drsreportselete"),
 ]
