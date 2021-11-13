@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^x-)3la9!2m85)d^tygofr+-c(d&e!1npoqr-#0^h5nhx3t5@z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["jthayil.pythonanywhere.com", "localhost", "127.0.0.1"]
 
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tally.apps.TallyConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
