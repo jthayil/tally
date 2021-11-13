@@ -1,7 +1,9 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Drs(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     pickup = models.DateField(null=True, blank=True)
     vehical_No = models.CharField(max_length=8, null=True, blank=True)
     party_Name = models.CharField(max_length=250, null=True, blank=True)
