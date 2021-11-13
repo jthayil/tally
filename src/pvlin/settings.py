@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-dh*u9si^5&9b+zou3lwv@1d%lrl$vi)x$%98*45%fz6w07)vqw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['jthayil.pythonanywhere.com', 'localhost', '127.0.0.1']
 
@@ -130,7 +130,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
+
+if DEBUG:
+    STATICFILES_DIRS = [BASE_DIR / "static"]
+    EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+    # EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+else:
+    STATIC_ROOT = BASE_DIR / "static"
+    EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
