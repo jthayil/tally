@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('tally.urls')),
     url('api/', include('rest_framework.urls', namespace='rest')),
-    path('auth/', include('dj_rest_auth.urls')),
+    # path('auth/', include('dj_rest_auth.urls')),
+    url('auth/', include('rest_auth.urls')),
+    url('auth/signup/', include('rest_auth.registration.urls'))
 ]
