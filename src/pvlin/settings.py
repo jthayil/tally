@@ -1,12 +1,12 @@
 from pathlib import Path
+
 from .local_settings import DB, SYSTEM_MAIL, SYSTEM_MAIL_PWD
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^x-)3la9!2m85)d^tygofr+-c(d&e!1npoqr-#0^h5nhx3t5@z'
 DEBUG = True
 
 ALLOWED_HOSTS = ["jthayil.pythonanywhere.com", "localhost", "127.0.0.1"]
-
-SITE_ID = 1
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -18,14 +18,7 @@ INSTALLED_APPS = [
     'tally.apps.TallyConfig',
     'rest_framework',
     'rest_framework.authtoken',
-    'rest_auth',
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'rest_auth.registration',
 ]
-
-SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
