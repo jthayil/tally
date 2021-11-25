@@ -12,7 +12,3 @@ request = requests.post(url=url, data=data)
 
 response = request.text.strip().replace("&amp;", "and")
 print(response)
-# responseXML = Et.fromstring(response)
-
-# for data in responseXML.findall('./BODY/DATA/COLLECTION/LEDGER'):
-    # print(data.get('NAME'))
